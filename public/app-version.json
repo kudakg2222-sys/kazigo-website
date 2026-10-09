@@ -1,6 +1,6 @@
 ﻿{
-  "latestVersion": "1.0.0",
+  "latestVersion": "1.0.1",
   "minimumVersion": "1.0.0",
-  "downloadUrl": "https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.0/KaziGo-Android-v1.0.0.apk",
-  "releaseNotes": "First public release of KaziGo for Android."
+  "downloadUrl": "https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.1/KaziGo-Android-v1.0.1.apk",
+  "releaseNotes": "KaziGo Android v1.0.1 includes in-app update checking and the latest app improvements."
 }
