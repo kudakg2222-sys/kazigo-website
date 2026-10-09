@@ -267,15 +267,14 @@ Kazi<span className="text-[#b9f36a]">Go</span> </span> </a>
         Ready to try KaziGo?
       </h2>
       <p className="mx-auto mt-4 max-w-xl leading-7 text-[#101510]/70">
-        Get ready to discover local services from your Android phone. The
-        official download will be available here once our APK is built,
-        tested and published.
+        Get ready to discover local services from your Android phone. Download
+        the official KaziGo Android app below and start exploring.
       </p>
       <a
         href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.0/KaziGo-Android-v1.0.0.apk"
         className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#101510] px-7 py-4 font-bold text-white transition hover:bg-white hover:text-[#101510]"
       >
-        <span>Download</span> Download APK for Android
+        <span>Download</span> Download KaziGo for Android
       </a>
       <p className="mt-5 text-sm text-[#101510]/60">
         KaziGo Android v1.0.0 · Official APK · 102 MB
@@ -297,6 +296,7 @@ Kazi<span className="text-[#b9f36a]">Go</span> </span> </a>
 
 );
 }
+
 
 
 
