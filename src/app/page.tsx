@@ -1,69 +1,305 @@
-import Image from "next/image";
+﻿"use client";
+
+import { useState } from "react";
+
+const features = [
+{
+number: "01",
+icon: "Search",
+title: "Find local services",
+description:
+"Discover service providers and find the help you need, all in one place.",
+},
+{
+number: "02",
+icon: "Services",
+title: "Book with confidence",
+description:
+"Arrange services and keep track of your bookings from your phone.",
+},
+{
+number: "03",
+icon: "Connect",
+title: "Stay connected",
+description:
+"Use messaging to communicate with service providers about your needs.",
+},
+];
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+const [menuOpen, setMenuOpen] = useState(false);
+
+return ( <main className="min-h-screen overflow-hidden bg-[#080b09] text-white"> <header className="sticky top-0 z-50 border-b border-white/10 bg-[#080b09]/95 backdrop-blur"> <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8"> <a href="#" className="flex items-center gap-3"> <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#b9f36a] text-xl font-black text-[#101510]">
+K </span> <span className="text-2xl font-black tracking-tight">
+Kazi<span className="text-[#b9f36a]">Go</span> </span> </a>
+
+      <nav className="hidden items-center gap-8 text-sm text-white/70 md:flex">
+        <a href="#features" className="transition hover:text-[#b9f36a]">
+          Features
+        </a>
+        <a href="#about" className="transition hover:text-[#b9f36a]">
+          About
+        </a>
+        <a href="#download" className="transition hover:text-[#b9f36a]">
+          Download
+        </a>
+      </nav>
+
+      <a
+        href="#download"
+        className="hidden rounded-full bg-[#b9f36a] px-6 py-3 text-sm font-bold text-[#101510] transition hover:bg-white sm:inline-flex"
+      >
+        Get KaziGo
+      </a>
+
+      <button
+        onClick={() => setMenuOpen(!menuOpen)}
+        className="rounded-lg border border-white/15 px-3 py-2 text-sm md:hidden"
+        aria-label="Toggle navigation"
+        aria-expanded={menuOpen}
+      >
+        {menuOpen ? "Close" : "Menu"}
+      </button>
+    </div>
+
+    {menuOpen && (
+      <nav className="flex flex-col gap-4 border-t border-white/10 px-6 py-5 text-sm md:hidden">
+        <a href="#features" onClick={() => setMenuOpen(false)}>
+          Features
+        </a>
+        <a href="#about" onClick={() => setMenuOpen(false)}>
+          About KaziGo
+        </a>
+        <a href="#download" onClick={() => setMenuOpen(false)}>
+          Download for Android
+        </a>
+      </nav>
+    )}
+  </header>
+
+  <section className="relative">
+    <div className="pointer-events-none absolute -right-40 -top-32 h-96 w-96 rounded-full bg-[#b9f36a]/10 blur-3xl" />
+    <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-2 lg:py-32">
+      <div className="relative z-10">
+        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#b9f36a]/25 bg-[#b9f36a]/5 px-4 py-2 text-xs font-semibold tracking-wide text-[#b9f36a]">
+          <span className="h-2 w-2 rounded-full bg-[#b9f36a]" />
+          YOUR LOCAL SERVICES, SIMPLIFIED
+        </div>
+
+        <h1 className="max-w-2xl text-5xl font-black leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+          Find help.
+          <br />
+          Book services.
+          <br />
+          <span className="text-[#b9f36a]">Get things done.</span>
+        </h1>
+
+        <p className="mt-7 max-w-xl text-lg leading-8 text-white/60">
+          Discover local service providers, arrange bookings and stay
+          connected. KaziGo brings services and people together in one
+          convenient place.
+        </p>
+
+        <div className="mt-9 flex flex-wrap gap-4" id="download">
+          <a
+            href="#android-download"
+            className="inline-flex items-center gap-3 rounded-full bg-[#b9f36a] px-7 py-4 font-bold text-[#101510] transition hover:scale-[1.02] hover:bg-white"
+          >
+            <span className="text-xl">Download</span>
+            Download for Android
+          </a>
+          <a
+            href="#features"
+            className="inline-flex items-center rounded-full border border-white/15 px-7 py-4 font-semibold transition hover:border-[#b9f36a]/60"
+          >
+            Explore features <span className="ml-2">&gt;</span>
+          </a>
+        </div>
+
+        <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/50">
+          <span>+ Easy to access</span>
+          <span>+ Designed for mobile</span>
+          <span>+ Built for local services</span>
+        </div>
+      </div>
+
+      <div className="relative mx-auto w-full max-w-lg">
+        <div className="absolute inset-8 rounded-full bg-[#b9f36a]/10 blur-3xl" />
+        <div className="relative rounded-[2.5rem] border border-white/10 bg-[#111612] p-4 shadow-2xl shadow-black/40 sm:p-6">
+          <div className="rounded-[2rem] border border-white/10 bg-[#080b09] p-5 sm:p-7">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-white/50">WELCOME TO</p>
+                <p className="mt-1 text-2xl font-black">
+                  Kazi<span className="text-[#b9f36a]">Go</span>
+                </p>
+              </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#b9f36a] text-2xl font-black text-[#101510]">
+                K
+              </div>
+            </div>
+
+            <div className="mt-8 rounded-3xl bg-[#b9f36a] p-6 text-[#101510]">
+              <p className="text-sm font-semibold opacity-70">
+                WHAT DO YOU NEED?
+              </p>
+              <h2 className="mt-2 text-3xl font-black leading-tight">
+                Find the right
+                <br />
+                person for the job.
+              </h2>
+              <div className="mt-6 flex items-center justify-between rounded-2xl bg-white/70 p-4">
+                <span className="text-sm font-medium">
+                  Search services...
+                </span>
+                <span className="text-xl">Search</span>
+              </div>
+            </div>
+
+            <div className="mt-7 flex items-center justify-between">
+              <h3 className="font-bold">Explore services</h3>
+              <span className="text-xs text-[#b9f36a]">DISCOVER</span>
+            </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              {[
+                ["Home", "Home services"],
+                ["Beauty", "Beauty & care"],
+                ["Repair", "Repairs"],
+                ["+", "More services"],
+              ].map(([icon, label]) => (
+                <div
+                  key={label}
+                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                >
+                  <span className="text-2xl text-[#b9f36a]">{icon}</span>
+                  <p className="mt-3 text-sm font-semibold">{label}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-7 text-center text-xs text-white/35">
+              A marketplace that brings people together.
+            </p>
+          </div>
+        </div>
+        <div className="absolute -bottom-5 -left-3 rounded-2xl border border-white/10 bg-[#161d17] px-5 py-4 shadow-xl sm:-left-8">
+          <p className="text-sm font-bold">Your next service</p>
+          <p className="mt-1 text-xs text-[#b9f36a]">
+            Starts with KaziGo &gt;
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
-  );
+  </section>
+
+  <section id="features" className="border-t border-white/10 bg-[#0c100d]">
+    <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+      <div className="max-w-2xl">
+        <p className="text-sm font-bold tracking-[0.2em] text-[#b9f36a]">
+          WHAT YOU CAN DO
+        </p>
+        <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+          Everything starts with a connection.
+        </h2>
+        <p className="mt-5 leading-7 text-white/55">
+          KaziGo is designed to make discovering services and connecting
+          with providers more convenient.
+        </p>
+      </div>
+
+      <div className="mt-12 grid gap-5 md:grid-cols-3">
+        {features.map((feature) => (
+          <article
+            key={feature.number}
+            className="group rounded-3xl border border-white/10 bg-white/[0.025] p-7 transition hover:-translate-y-1 hover:border-[#b9f36a]/40"
+          >
+            <div className="flex items-center justify-between">
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#b9f36a]/10 text-3xl text-[#b9f36a]">
+                {feature.icon}
+              </span>
+              <span className="text-sm text-white/30">
+                {feature.number}
+              </span>
+            </div>
+            <h3 className="mt-8 text-xl font-bold">{feature.title}</h3>
+            <p className="mt-3 leading-7 text-white/55">
+              {feature.description}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="about" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+    <div className="grid items-center gap-10 rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#151d14] to-[#0b0e0b] p-7 sm:p-12 lg:grid-cols-2 lg:p-16">
+      <div>
+        <p className="text-sm font-bold tracking-[0.2em] text-[#b9f36a]">
+          ABOUT KAZIGO
+        </p>
+        <h2 className="mt-4 text-4xl font-black leading-tight sm:text-5xl">
+          Making it easier to find the help you need.
+        </h2>
+      </div>
+      <div>
+        <p className="leading-8 text-white/60">
+          KaziGo is a local services marketplace built to help customers
+          discover providers and make connections. Our goal is to make
+          finding and arranging everyday services simpler.
+        </p>
+        <a
+          href="#download"
+          className="mt-7 inline-flex items-center gap-2 font-bold text-[#b9f36a] hover:text-white"
+        >
+          Get started with KaziGo <span>{" > "}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="android-download" className="px-5 pb-20 sm:px-8 sm:pb-28">
+    <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-[#b9f36a] px-7 py-12 text-center text-[#101510] sm:px-14 sm:py-16">
+      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#101510] text-3xl font-black text-[#b9f36a]">
+        K
+      </div>
+      <h2 className="mt-6 text-4xl font-black tracking-tight sm:text-5xl">
+        Ready to try KaziGo?
+      </h2>
+      <p className="mx-auto mt-4 max-w-xl leading-7 text-[#101510]/70">
+        Get ready to discover local services from your Android phone. The
+        official download will be available here once our APK is built,
+        tested and published.
+      </p>
+      <div className="mt-8 inline-flex cursor-not-allowed items-center gap-3 rounded-full bg-[#101510] px-7 py-4 font-bold text-white/70">
+        <span>Download</span> Android download coming soon
+      </div>
+      <p className="mt-5 text-sm text-[#101510]/60">
+        We will enable this button after verifying the official APK.
+      </p>
+    </div>
+  </section>
+
+  <footer className="border-t border-white/10">
+    <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 text-sm text-white/45 sm:px-8 md:flex-row md:items-center md:justify-between">
+      <a href="#" className="text-lg font-black text-white">
+        Kazi<span className="text-[#b9f36a]">Go</span>
+      </a>
+      <p>Connecting people with local services.</p>
+      <p>(c) 2026 KaziGo. All rights reserved.</p>
+<p className="text-[#b9f36a]">Developed by KACE DEVELOPERS TEAM</p>
+    </div>
+  </footer>
+</main>
+
+);
 }
+
+
+
+
+
+
+
+
+
