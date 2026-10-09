@@ -102,7 +102,7 @@ Kazi<span className="text-[#b9f36a]">Go</span> </span> </a>
 
         <div className="mt-9 flex flex-wrap gap-4" id="download">
           <a
-            href="#android-download"
+            href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.0/KaziGo-Android-v1.0.0.apk"
             className="inline-flex items-center gap-3 rounded-full bg-[#b9f36a] px-7 py-4 font-bold text-[#101510] transition hover:scale-[1.02] hover:bg-white"
           >
             <span className="text-xl">Download</span>
@@ -271,11 +271,14 @@ Kazi<span className="text-[#b9f36a]">Go</span> </span> </a>
         official download will be available here once our APK is built,
         tested and published.
       </p>
-      <div className="mt-8 inline-flex cursor-not-allowed items-center gap-3 rounded-full bg-[#101510] px-7 py-4 font-bold text-white/70">
-        <span>Download</span> Android download coming soon
-      </div>
+      <a
+        href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.0/KaziGo-Android-v1.0.0.apk"
+        className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#101510] px-7 py-4 font-bold text-white transition hover:bg-white hover:text-[#101510]"
+      >
+        <span>Download</span> Download APK for Android
+      </a>
       <p className="mt-5 text-sm text-[#101510]/60">
-        We will enable this button after verifying the official APK.
+        KaziGo Android v1.0.0 · Official APK · 102 MB
       </p>
     </div>
   </section>
@@ -294,6 +297,7 @@ Kazi<span className="text-[#b9f36a]">Go</span> </span> </a>
 
 );
 }
+
 
 
 
