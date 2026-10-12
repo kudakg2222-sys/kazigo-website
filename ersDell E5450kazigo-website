@@ -1,0 +1,38 @@
+warning: in the working copy of 'src/app/page.tsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/app/page.tsx b/src/app/page.tsx[m
+[1mindex 836527c..24d1160 100644[m
+[1m--- a/src/app/page.tsx[m
+[1m+++ b/src/app/page.tsx[m
+[36m@@ -102,7 +102,7 @@[m [mKazi<span className="text-[#b9f36a]">Go</span> </span> </a>[m
+ [m
+         <div className="mt-9 flex flex-wrap gap-4" id="download">[m
+           <a[m
+[31m-            href="#android-download"[m
+[32m+[m[32m            href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.0/KaziGo-Android-v1.0.0.apk"[m
+             className="inline-flex items-center gap-3 rounded-full bg-[#b9f36a] px-7 py-4 font-bold text-[#101510] transition hover:scale-[1.02] hover:bg-white"[m
+           >[m
+             <span className="text-xl">Download</span>[m
+[36m@@ -271,11 +271,14 @@[m [mKazi<span className="text-[#b9f36a]">Go</span> </span> </a>[m
+         official download will be available here once our APK is built,[m
+         tested and published.[m
+       </p>[m
+[31m-      <div className="mt-8 inline-flex cursor-not-allowed items-center gap-3 rounded-full bg-[#101510] px-7 py-4 font-bold text-white/70">[m
+[31m-        <span>Download</span> Android download coming soon[m
+[31m-      </div>[m
+[32m+[m[32m      <a[m
+[32m+[m[32m        href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.0/KaziGo-Android-v1.0.0.apk"[m
+[32m+[m[32m        className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#101510] px-7 py-4 font-bold text-white transition hover:bg-white hover:text-[#101510]"[m
+[32m+[m[32m      >[m
+[32m+[m[32m        <span>Download</span> Download APK for Android[m
+[32m+[m[32m      </a>[m
+       <p className="mt-5 text-sm text-[#101510]/60">[m
+[31m-        We will enable this button after verifying the official APK.[m
+[32m+[m[32m        KaziGo Android v1.0.0 · Official APK · 102 MB[m
+       </p>[m
+     </div>[m
+   </section>[m
+[36m@@ -303,3 +306,4 @@[m [mKazi<span className="text-[#b9f36a]">Go</span> </span> </a>[m
+ [m
+ [m
+ [m
+[41m+[m
