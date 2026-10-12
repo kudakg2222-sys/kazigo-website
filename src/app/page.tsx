@@ -29,53 +29,48 @@ description:
 export default function Home() {
 const [menuOpen, setMenuOpen] = useState(false);
 
-return ( <main className="min-h-screen overflow-hidden bg-[#080b09] text-white"> <header className="sticky top-0 z-50 border-b border-white/10 bg-[#080b09]/95 backdrop-blur"> <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8"> <a href="#" className="flex items-center gap-3"> <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#b9f36a] text-xl font-black text-[#101510]">
-K </span> <span className="text-2xl font-black tracking-tight">
-Kazi<span className="text-[#b9f36a]">Go</span> </span> </a>
+return ( <main className="min-h-screen overflow-hidden bg-[#080b09] text-white"> <header className="relative z-20 border-b border-white/10 bg-[#070908]">
+  <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-8">
+    <a href="/" className="text-lg font-black tracking-tight sm:text-xl">
+      KaziGo
+    </a>
 
-      <nav className="hidden items-center gap-8 text-sm text-white/70 md:flex">
-        <a href="#features" className="transition hover:text-[#b9f36a]">
-          Features
-        </a>
-        <a href="#about" className="transition hover:text-[#b9f36a]">
-          About
-        </a>
-        <a href="#download" className="transition hover:text-[#b9f36a]">
-          Download
-        </a>
-      </nav>
-
+    <nav className="hidden items-center gap-7 text-sm md:flex">
+      <a href="/projects" className="transition hover:text-[#b9f36a]">
+        KACE Developers
+      </a>
+      <a href="#download" className="transition hover:text-[#b9f36a]">
+        Download
+      </a>
       <a
-        href="#download"
-        className="hidden rounded-full bg-[#b9f36a] px-6 py-3 text-sm font-bold text-[#101510] transition hover:bg-white sm:inline-flex"
+        href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.1/KaziGo-Android-v1.0.1.apk.apk"
+        className="rounded-full bg-[#b9f36a] px-5 py-3 font-bold text-[#101510] transition hover:bg-white"
       >
         Get KaziGo
       </a>
+    </nav>
 
-      <button
-        onClick={() => setMenuOpen(!menuOpen)}
-        className="rounded-lg border border-white/15 px-3 py-2 text-sm md:hidden"
-        aria-label="Toggle navigation"
-        aria-expanded={menuOpen}
-      >
-        {menuOpen ? "Close" : "Menu"}
-      </button>
-    </div>
+    <button
+      onClick={() => setMenuOpen(!menuOpen)}
+      className="rounded-lg border border-white/15 px-3 py-2 text-sm md:hidden"
+      aria-label="Toggle navigation"
+      aria-expanded={menuOpen}
+    >
+      {menuOpen ? "Close" : "Menu"}
+    </button>
+  </div>
 
-    {menuOpen && (
-      <nav className="flex flex-col gap-4 border-t border-white/10 px-6 py-5 text-sm md:hidden">
-        <a href="#features" onClick={() => setMenuOpen(false)}>
-          Features
-        </a>
-        <a href="#about" onClick={() => setMenuOpen(false)}>
-          About KaziGo
-        </a>
-        <a href="#download" onClick={() => setMenuOpen(false)}>
-          Download for Android
-        </a>
-      </nav>
-    )}
-  </header>
+  {menuOpen && (
+    <nav className="flex flex-col gap-4 border-t border-white/10 px-6 py-5 text-sm md:hidden">
+      <a href="/projects" onClick={() => setMenuOpen(false)}>
+        KACE Developers
+      </a>
+      <a href="#download" onClick={() => setMenuOpen(false)}>
+        Download for Android
+      </a>
+    </nav>
+  )}
+</header>
 
   <section className="relative">
     <div className="pointer-events-none absolute -right-40 -top-32 h-96 w-96 rounded-full bg-[#b9f36a]/10 blur-3xl" />
