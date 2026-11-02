@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -43,7 +43,7 @@ return ( <main className="min-h-screen overflow-hidden bg-[#080b09] text-white">
         Download
       </a>
       <a
-        href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.2/KaziGo-Android-v1.0.2.apk"
+        href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.2.0/KaziGo-Android-v1.2.0.apk"
         className="rounded-full bg-[#b9f36a] px-5 py-3 font-bold text-[#101510] transition hover:bg-white"
       >
         Get KaziGo
@@ -97,7 +97,7 @@ return ( <main className="min-h-screen overflow-hidden bg-[#080b09] text-white">
 
         <div className="mt-9 flex flex-wrap gap-4" id="download">
           <a
-            href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.2/KaziGo-Android-v1.0.2.apk"
+            href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.2.0/KaziGo-Android-v1.2.0.apk"
             className="inline-flex items-center gap-3 rounded-full bg-[#b9f36a] px-7 py-4 font-bold text-[#101510] transition hover:scale-[1.02] hover:bg-white"
           >
             <span className="text-xl">Download</span>
@@ -266,13 +266,13 @@ return ( <main className="min-h-screen overflow-hidden bg-[#080b09] text-white">
         the official KaziGo Android app below and start exploring.
       </p>
       <a
-        href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.0.2/KaziGo-Android-v1.0.2.apk"
+        href="https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.2.0/KaziGo-Android-v1.2.0.apk"
         className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#101510] px-7 py-4 font-bold text-white transition hover:bg-white hover:text-[#101510]"
       >
         <span>Download</span> Download KaziGo for Android
       </a>
       <p className="mt-5 text-sm text-[#101510]/60">
-        KaziGo Android v1.0.2 · Official APK
+        KaziGo Android v1.2.0 | Official APK
       </p>
     </div>
   </section>
