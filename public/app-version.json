@@ -1,6 +1,6 @@
 ﻿{
-    "latestVersion":  "1.2.0",
-    "minimumVersion":  "1.0.0",
-    "downloadUrl":  "https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.2.0/KaziGo-Android-v1.2.0.apk",
-    "releaseNotes":  "KaziGo v1.2.0 introduces four appearance themes, improved messaging presentation, and provider completed-job count synchronization."
+  "latestVersion": "1.2.1",
+  "minimumVersion": "1.0.0",
+  "downloadUrl": "https://github.com/kudakg2222-sys/kazigo-website/releases/download/v1.2.1/KaziGo-Android-v1.2.1.apk",
+  "releaseNotes": "KaziGo v1.2.1 includes the latest improvements and refinements."
 }
